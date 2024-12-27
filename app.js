@@ -5,22 +5,22 @@ const userRoutes = require('./routes/userRoutes');
 const bodyParser = require('body-parser');
 
 
-// Middleware pour analyser les corps de requêtes JSON
+
 app.use(express.json());
 
-// Routes
+
 app.use('/api/messages', messageRoutes);
 app.use('/api/users', userRoutes);
 
-app.use(bodyParser.json()); // Pour traiter le corps de la requête en JSON
+app.use(bodyParser.json()); 
 
-// Exemple de route GET
+
 app.get('/messages', (req, res) => {
   const { sender_id, recipient_id, date_from, date_to, status, limit, offset } = req.query;
 
   console.log('Received request:', req.query); // Affiche la requête dans la console du serveur
   
-  // Crée une réponse contenant les données reçues
+ 
   const response = `
     <h1>Received Message Details</h1>
     <ul>
@@ -34,7 +34,7 @@ app.get('/messages', (req, res) => {
     </ul>
   `;
 
-  res.send(response); // Affiche les informations dans le navigateur
+  res.send(response); 
 });
 
 
