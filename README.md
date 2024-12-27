@@ -12,7 +12,7 @@ Ce projet est une API simple construite avec Node.js et Express.js qui se connec
 
 1. Clonez le dépôt :
     ```sh
-    git clone https://github.com/votre-utilisateur/votre-repo.git](https://github.com/nabilabel123/Projet.git)
+    git clone https://github.com/nabilabel123/Projet.git
     ```
 2. Accédez au répertoire du projet :
     ```sh
