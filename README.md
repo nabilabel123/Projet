@@ -25,23 +25,15 @@ Ce projet est une API simple construite avec Node.js et Express.js qui se connec
 
 ## Configuration
 
-1. Créez un fichier `.env` à la racine du projet et ajoutez votre configuration de base de données :
-    ```env
-    DB_HOST=localhost
-    DB_USER=root
-    DB_PASSWORD=
-    DB_NAME=my_projet
-    ```
-
-2. Mettez à jour la configuration de la base de données dans `db.js` si nécessaire :
+   1. Mettez à jour la configuration de la base de données dans `db.js` :
     ```javascript
     const mysql = require('mysql2');
 
     const db = mysql.createConnection({
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME
+      host: 'localhost',
+      user: 'root',
+      password: '',
+      database: 'my_projet'
     });
 
     db.connect((err) => {
@@ -76,13 +68,11 @@ Mettre à jour les données dans la base de données.
 - Corps :
     ```json
     {
-      "field1": "newValue1",
-      "field2": "newValue2"
-    }
+  "sender_id": 1,
+  "recipient_id": 2,
+  "content": "N’oublie pas de soumettre ton devoir avant demain.",
+  "course_id": 1,
+  "status": " lu"
+}
     ```
 
-## Contribuer
-N'hésitez pas à soumettre des issues et des pull requests.
-
-## Licence
-Ce projet est sous licence MIT.
