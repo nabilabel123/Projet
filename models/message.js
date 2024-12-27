@@ -1,7 +1,7 @@
 const db = require('../config/db');
 
 const Message = {
-  // Create a message
+ 
   createMessage: (sender_id, recipient_id, content, course_id, status) => {
     return new Promise((resolve, reject) => {
       const query = `
@@ -18,7 +18,7 @@ const Message = {
     });
   },
 
-  // Get messages with filters
+  
   getMessages: (sender_id, recipient_id, date_from, date_to, status) => {
     return new Promise((resolve, reject) => {
       let query = `
@@ -47,11 +47,10 @@ const Message = {
     });
   },
 
-  // Update message status
- // In your Message model
+
 updateStatus: async (id, status) => {
   try {
-    // Remove COALESCE/IFNULL and make it a direct update
+  
     const query = 'UPDATE messages SET status = ? WHERE id = ?';
 
     return new Promise((resolve, reject) => {
