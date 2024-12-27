@@ -16,7 +16,7 @@ Ce projet est une API simple construite avec Node.js et Express.js qui se connec
     ```
 2. Accédez au répertoire du projet :
     ```sh
-    cd votre-repo
+    cd Projet
     ```
 3. Installez les dépendances :
     ```sh
